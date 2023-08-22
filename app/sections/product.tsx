@@ -1,39 +1,30 @@
-import React from 'react';
-import Image from 'next/image';
-import Featured1 from '../assets/Featured1.png';
-import Featured2 from '../assets/Featured2.png';
-import Featured3 from '../assets/Featured3.png';
+import React, { Key } from 'react';
+import Link from 'next/link';
+import { urlFor } from '../../sanity/lib/client';
 
-const Product = () => {
+
+interface Product {
+  _id: Key | null | undefined;
+  product: {
+    image?: string[]; // Change this to match your actual data structure
+    name: string;
+    slug: {
+      current: string;
+    };
+    price: number;
+    // Add other properties of the product
+  };
+}
+
+const Product: React.FC<Product> = ({ product }) => {
   return (
-    <div className="product-container flex justify-between">
-      <div className="product">
-        <div className="image-container">
-          <Image src={Featured1} alt="Product 1" width={200} height={200} />
+    <div>
+      <Link href={`/product/${product.slug.current}`}>
+        <div className='product-card'>
+         <p className='product-name'>{product.name}</p>
+          <p className='product-price'>${product.price}</p>
         </div>
-        <div className="product-details">
-          <h3>Product 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div className="product">
-        <div className="image-container">
-          <Image src={Featured2} alt="Product 2" width={200} height={200} />
-        </div>
-        <div className="product-details">
-          <h3>Product 2</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
-      <div className="product">
-        <div className="image-container">
-          <Image src={Featured3} alt="Product 3" width={200} height={200} />
-        </div>
-        <div className="product-details">
-          <h3>Product 3</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 };

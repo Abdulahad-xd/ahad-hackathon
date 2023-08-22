@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { CgShoppingCart } from 'react-icons/cg';
-import headerImg from '../assets/header.png';
-import featured1 from '../assets/Featured1.png';
-import featured2 from '../assets/Featured2.png';
-import featured3 from '../assets/Featured3.png';
-import featured4 from '../assets/Featured4.png';
+import headerImg from '../../assets/header.png';
+import featured1 from '../../assets/Featured1.png';
+import featured2 from '../../assets/Featured2.png';
+import featured3 from '../../assets/Featured3.png';
+import featured4 from '../../assets/Featured4.png';
 import Link from 'next/link';
 
 const Hero = () => {
