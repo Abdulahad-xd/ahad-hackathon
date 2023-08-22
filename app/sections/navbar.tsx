@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 import { CiSearch } from 'react-icons/ci';
-import Logo from '../assets/Logo.png';
+import Logo from '../../assets/Logo.png';
 
 const Navbar = () => {
   return (
@@ -15,14 +15,15 @@ const Navbar = () => {
         </Link>
         <ul className="hidden md:flex space-x-4">
           <li>
-            <Link href="/female">
+            <Link href="/female"> {/* Change "../pages/female" to "/female" */}
               <div className="cursor-pointer">Female</div>
             </Link>
           </li>
           <li>
-            <Link href="/male">
-              <div className="cursor-pointer">Male</div>
-            </Link>
+          <Link href="/male">
+  <div className="cursor-pointer">Male</div>
+</Link>
+
           </li>
           <li>
             <Link href="/kids">
@@ -30,7 +31,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/products">
+            <Link href="/allproduct">
               <div className="cursor-pointer">All Products</div>
             </Link>
           </li>

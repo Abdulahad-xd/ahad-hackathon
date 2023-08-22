@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import img from '../assets/feature.png';
+import img from '../../assets/feature.png';
 import Link from 'next/link';
 
 const Feature = () => {

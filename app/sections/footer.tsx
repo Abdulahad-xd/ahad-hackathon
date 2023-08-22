@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { GrFacebookOption, GrTwitter, GrLinkedinOption } from 'react-icons/gr';
-import logo from '../assets/Logo.png';
+import logo from '../../assets/Logo.png';
 
 const Footer = () => {
   return (
